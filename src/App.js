@@ -5,7 +5,7 @@ import Home from './pages/home';
 
 const App = () => {
   return (
-    <div >
+    <div className='bg-[#0c0e0e]' >
       
     
     <Routes>
