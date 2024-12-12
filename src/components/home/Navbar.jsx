@@ -31,8 +31,8 @@ const Navbar = () => {
                         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 >
-                    <a href="#" className="block md:inline-block py-2 px-4">Home</a>
-                    <a href="#" className="block md:inline-block py-2 px-4">About</a>
+                    <a href="#home" className="block md:inline-block py-2 px-4">Home</a>
+                    <a href="#about" className="block md:inline-block py-2 px-4">About</a>
                     <a href="#" className="block md:inline-block py-2 px-4">Services</a>
                     <a href="#" className="block md:inline-block py-2 px-4">Work</a>
                     <a href="#" className="block md:inline-block py-2 px-4">Contact</a>
