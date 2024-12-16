@@ -33,8 +33,8 @@ const Navbar = () => {
                 >
                     <a href="#home" className="block md:inline-block py-2 px-4">Home</a>
                     <a href="#about" className="block md:inline-block py-2 px-4">About</a>
-                    <a href="#" className="block md:inline-block py-2 px-4">Services</a>
-                    <a href="#" className="block md:inline-block py-2 px-4">Work</a>
+                    <a href="#works" className="block md:inline-block py-2 px-4">Work</a>
+                    <a href="#resume" className="block md:inline-block py-2 px-4">Resume</a>
                     <a href="#" className="block md:inline-block py-2 px-4">Contact</a>
                 </div>
 
