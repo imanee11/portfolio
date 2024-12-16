@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="px-[8vw] py-5 flex items-center justify-between fixed right-0 top-0 left-0 z-50 bg-[#0c0e0e]">
+            <nav className="px-[8vw] py-4 flex items-center justify-between fixed right-0 top-0 left-0 z-50 bg-[#0c0e0e] shadow-sm shadow-black">
                 {/* Logo */}
                 <div>
                     <img src={image.logo} alt="Logo" className="lg:w-[4vw] w-[15vw]" />
@@ -31,10 +31,11 @@ const Navbar = () => {
                         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 >
-                    <a href="#home" className="block md:inline-block py-2 px-4">Home</a>
+                    {/* <a href="#home" className="block md:inline-block py-2 px-4">Home</a> */}
                     <a href="#about" className="block md:inline-block py-2 px-4">About</a>
                     <a href="#works" className="block md:inline-block py-2 px-4">Work</a>
                     <a href="#resume" className="block md:inline-block py-2 px-4">Resume</a>
+                    <a href="#skills" className="block md:inline-block py-2 px-4">Skills</a>
                     <a href="#" className="block md:inline-block py-2 px-4">Contact</a>
                 </div>
 
