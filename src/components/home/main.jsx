@@ -29,8 +29,11 @@ import Typewriter from 'typewriter-effect';
 import { motion, useScroll, useTransform } from "motion/react"
 
 import Tabs from './tabs';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+
+    const navigate = useNavigate();
 
     const { scrollYProgress } = useScroll();
     // Animate based on scroll for the image rotation and scaling
@@ -89,7 +92,7 @@ const Main = () => {
                                     <span className="relative z-10 text-sm font-medium text-black">Hire Me</span>
                                     <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
                                     <span className="relative z-10 ml-3 text-black">
-                                        <FiArrowRight className="w-4 h-4" />
+                                        <FaLongArrowAltRight className="w-4 h-4" />
                                     </span>
                                 </motion.button>
                             </div>
@@ -237,17 +240,15 @@ const Main = () => {
                                 <p className='text-[#DDD] text-[14px]  pb-4'>
                                     Explore captivating visuals that showcase creativity and passion. Each shot is a story, waiting to inspire and amaze.
                                 </p>
-                                <a href="">
-                                    <div className="flex justify-center md:justify-start">
-                                        <button className="relative flex items-center px-6 py-3 bg-[#bdd9d8] rounded-full border border-[#bdd9d8] overflow-hidden">
-                                            <span className="relative z-10 text-sm font-medium text-black">Show all </span>
-                                            {/* <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group2-hover:translate-x-0 transition-transform duration-300"></span> */}
-                                            <span className="relative z-10 ml-3 text-black">
-                                                <FaLongArrowAltRight />
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
+                                <div className="flex justify-center md:justify-start">
+                                    <button onClick={() => navigate("/projects")} className="relative flex items-center px-6 py-3 bg-[#bdd9d8] rounded-full border border-[#bdd9d8] overflow-hidden">
+                                        <span className="relative z-10 text-sm font-medium text-black">Show all </span>
+                                        {/* <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group2-hover:translate-x-0 transition-transform duration-300"></span> */}
+                                        <span className="relative z-10 ml-3 text-black">
+                                            <FaLongArrowAltRight />
+                                        </span>
+                                    </button>
+                                </div>
                             </motion.div>
 
                         </motion.div>
