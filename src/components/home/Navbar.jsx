@@ -36,7 +36,7 @@ const Navbar = () => {
                     <a href="#works" className="block md:inline-block py-2 px-4">Work</a>
                     <a href="#resume" className="block md:inline-block py-2 px-4">Resume</a>
                     <a href="#skills" className="block md:inline-block py-2 px-4">Skills</a>
-                    <a href="#" className="block md:inline-block py-2 px-4">Contact</a>
+                    <a href="#contact" className="block md:inline-block py-2 px-4">Contact</a>
                 </div>
 
                 {/* Social Icon */}
