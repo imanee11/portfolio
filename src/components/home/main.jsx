@@ -54,7 +54,7 @@ const Main = () => {
                 <div className="px-[8vw] py-[15vh] lg:py-[12vh]">
 
                     {/* hero section */}
-                    <div id="home" className="flex flex-col md:flex-row items-center">
+                    <div id="" className="flex flex-col md:flex-row items-center">
                         {/* Left Section */}
                         <motion.div
                             className="w-full md:w-[50%] text-center md:text-left"

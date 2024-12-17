@@ -1,14 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import image from '../../constants/image';
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FiMenu, FiX } from "react-icons/fi"; // Icons for menu toggle
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section");
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.6, // Trigger when 60% of section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id); // Update the active section
+                }
+            });
+        }, options);
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Cleanup
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
 
     return (
         <>
@@ -31,20 +57,47 @@ const Navbar = () => {
                         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 >
-                    {/* <a href="#home" className="block md:inline-block py-2 px-4">Home</a> */}
-                    <a href="#about" className="block md:inline-block py-2 px-4">About</a>
-                    <a href="#works" className="block md:inline-block py-2 px-4">Work</a>
-                    <a href="#resume" className="block md:inline-block py-2 px-4">Resume</a>
-                    <a href="#skills" className="block md:inline-block py-2 px-4">Skills</a>
-                    <a href="#contact" className="block md:inline-block py-2 px-4">Contact</a>
+                    <a
+                        href="#about"
+                        className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
+                            activeSection === 'about' ? 'text-[#ffd2a9]' : ''
+                        }`}
+                    >
+                        About
+                    </a>
+                    <a
+                        href="#works"
+                        className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
+                            activeSection === 'works' ? 'text-[#ffd2a9]' : ''
+                        }`}
+                    >
+                        Work
+                    </a>
+                    <a
+                        href="#resume"
+                        className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
+                            activeSection === 'resume' ? 'text-[#ffd2a9]' : ''
+                        }`}
+                    >
+                        Resume
+                    </a>
+                    <a
+                        href="#skills"
+                        className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
+                            activeSection === 'skills' ? 'text-[#ffd2a9]' : ''
+                        }`}
+                    >
+                        Skills
+                    </a>
+                    <a
+                        href="#contact"
+                        className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
+                            activeSection === 'contact' ? 'text-[#ffd2a9]' : ''
+                        }`}
+                    >
+                        Contact
+                    </a>
                 </div>
-
-                {/* Social Icon */}
-                {/* <div className="hidden md:block">
-                    <div className="bg-[#bdd9d8] p-1 rounded-sm cursor-pointer">
-                        <FaLinkedinIn className="text-[#0c0e0e]" />
-                    </div>
-                </div> */}
             </nav>
         </>
     );
