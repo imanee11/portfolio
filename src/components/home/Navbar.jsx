@@ -60,7 +60,7 @@ const Navbar = () => {
                     <a
                         href="#about"
                         className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
-                            activeSection === 'about' ? 'text-[#ffd2a9]' : ''
+                            activeSection === 'about' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9] ' : ''
                         }`}
                     >
                         About
@@ -68,7 +68,7 @@ const Navbar = () => {
                     <a
                         href="#works"
                         className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
-                            activeSection === 'works' ? 'text-[#ffd2a9]' : ''
+                            activeSection === 'works' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9]' : ''
                         }`}
                     >
                         Work
@@ -76,7 +76,7 @@ const Navbar = () => {
                     <a
                         href="#resume"
                         className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
-                            activeSection === 'resume' ? 'text-[#ffd2a9]' : ''
+                            activeSection === 'resume' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9]' : ''
                         }`}
                     >
                         Resume
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <a
                         href="#skills"
                         className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
-                            activeSection === 'skills' ? 'text-[#ffd2a9]' : ''
+                            activeSection === 'skills' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9]' : ''
                         }`}
                     >
                         Skills
@@ -92,7 +92,7 @@ const Navbar = () => {
                     <a
                         href="#contact"
                         className={`block md:inline-block py-2 px-4 transition-colors duration-300 ${
-                            activeSection === 'contact' ? 'text-[#ffd2a9]' : ''
+                            activeSection === 'contact' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9]' : ''
                         }`}
                     >
                         Contact
