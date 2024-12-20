@@ -32,15 +32,15 @@ const Main = () => {
                     {/* First Row */}
                     <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
                         {imageDetails.slice(0, 3).map((img, index) => (
-                            <div key={index} className="lg:w-[25vw] lg:h-[100%] h-[65vh] relative group overflow-hidden rounded-lg">
+                            <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
                                 <img
                                     src={img.src}
                                     alt={img.title}
-                                    className="w-[100%] h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
+                                    className="w-full h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
                                 />
                                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300">
-                                    <h3 className="text-[20px] font-semibold mb-2">{img.title}</h3>
-                                    <p className="text-[12px]">{img.description}</p>
+                                    <h3 className="text-[20px] font-semibold mb-2 text-center">{img.title}</h3>
+                                    <p className="text-[12px] text-center px-4">{img.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -49,15 +49,15 @@ const Main = () => {
                     {/* Second Row */}
                     <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
                         {imageDetails.slice(3).map((img, index) => (
-                            <div key={index} className="lg:w-[25vw] lg:h-[100%] h-[65vh] relative group overflow-hidden rounded-lg">
+                            <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
                                 <img
                                     src={img.src}
                                     alt={img.title}
-                                    className="w-[100%] h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
+                                    className="w-full h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
                                 />
                                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300">
-                                    <h3 className="text-[20px] font-semibold mb-2">{img.title}</h3>
-                                    <p className="text-[12px]">{img.description}</p>
+                                    <h3 className="text-[20px] font-semibold mb-2 text-center">{img.title}</h3>
+                                    <p className="text-[12px] text-center px-4">{img.description}</p>
                                 </div>
                             </div>
                         ))}
