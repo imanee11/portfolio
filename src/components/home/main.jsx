@@ -228,7 +228,7 @@ const Main = () => {
                                     <img src={image.pr2} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                                 <div className='lg:w-[33%] lg:h-[65vh]'>
-                                    <img src={image.pr5} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
+                                    <img src={image.pr6} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                             </div>
 
@@ -638,8 +638,9 @@ const Main = () => {
                     <section className='fixed lg:bottom-5 lg:right-5 bottom-8 right-5'>
                         <div className='flex flex-col gap-3'>
                             <FaLinkedinIn className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
-                            <FaGithub className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
-
+                            <a href="https://github.com/imanee11">
+                                <FaGithub className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
+                            </a>
                         </div>
                     </section>
                 </div>

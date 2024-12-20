@@ -9,6 +9,5 @@ export default{
     pr3 : require('../assets/images/pr3.jpeg'),
     pr4 : require('../assets/images/pr4.jpeg'),
     pr5 : require('../assets/images/landingPage.jpeg'),
-
-
+    pr6 : require('../assets/images/pr6.jpeg'),
 }

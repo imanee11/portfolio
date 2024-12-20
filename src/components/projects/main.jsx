@@ -13,7 +13,7 @@ const Main = () => {
         { src: image.pr3, title: "Restaurant website", description: "Html, SASS, Bootstrap and JavaScript" },
         { src: image.pr4, title: "Fash.", description: "React JS, Tailwind CSS" },
         { src: image.pr1, title: "Restaurant website", description: "Html, CSS, SASS and Bootstrap" },
-        { src: image.pr5, title: "Camerawoman portfolio", description: "React JS, Tailwind CSS" }
+        { src: image.pr6, title: "Camerawoman portfolio", description: "React JS, Tailwind CSS" }
     ];
 
     return (

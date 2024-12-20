@@ -71,7 +71,7 @@ const Navbar = () => {
                             activeSection === 'works' ? 'text-[#ffd2a9] border-b-[2px] border-[#ffd2a9]' : ''
                         }`}
                     >
-                        Work
+                        Projects
                     </a>
                     <a
                         href="#resume"
