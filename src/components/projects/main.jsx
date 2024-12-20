@@ -8,7 +8,7 @@ const Main = () => {
 
     // Define descriptions for each image
     const imageDetails = [
-        { src: image.pr5, title: "Task anagement app", description: "Laravel 11, Tailwind CSS, and Breez" },
+        { src: image.pr5, title: "Task anagement app", description: "Laravel 11, Tailwind CSS, and Breeze" },
         { src: image.pr2, title: "Website about Morocco", description: "Html, CSS" },
         { src: image.pr3, title: "Restaurant website", description: "Html, SASS, Bootstrap and JavaScript" },
         { src: image.pr4, title: "Fash.", description: "React JS, Tailwind CSS" },
