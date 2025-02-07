@@ -36,7 +36,7 @@ const Main = () => {
                                 <img
                                     src={img.src}
                                     alt={img.title}
-                                    className="w-full h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
+                                    className="w-full h-[100%]  rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
                                 />
                                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300">
                                     <h3 className="text-[20px] font-semibold mb-2 text-center">{img.title}</h3>

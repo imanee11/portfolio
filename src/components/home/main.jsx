@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import image from '../../constants/image';
+import emailjs from '@emailjs/browser';
 
 
 import { FiArrowRight } from "react-icons/fi";
@@ -28,7 +29,7 @@ import { IoIosSend } from "react-icons/io";
 import Typewriter from 'typewriter-effect';
 import { motion, useScroll, useTransform } from "motion/react"
 
-import Tabs from './tabs';
+// import Tabs from './tabs';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
@@ -49,6 +50,37 @@ const Main = () => {
         hidden: { x: -100, opacity: 0 },
         visible: { x: 0, opacity: 1 },
         exit: { x: -100, opacity: 0 },
+    };
+
+
+    // Add these new state variables with your existing ones
+    const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
+
+    // Add this new function
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('');
+
+        emailjs.sendForm(
+            'service_3hicu08', // Replace with your Service ID
+            'template_6vk4nh3', // Replace with your Template ID
+            form.current,
+            'CtXs5u3xNbelEIz9i' // Replace with your Public Key
+        )
+            .then((result) => {
+                setSubmitStatus('Message sent successfully!');
+                // Clear form
+                form.current.reset();
+            })
+            .catch((error) => {
+                setSubmitStatus('Failed to send message. Please try again.');
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+            });
     };
 
     return (
@@ -222,13 +254,13 @@ const Main = () => {
                             {/* <Tabs/> */}
                             <div className='flex flex-col lg:flex-row gap-4 lg:w-[80vw]'>
                                 <div className='lg:w-[33%] lg:h-[65vh]'>
-                                    <img src={image.pr5} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
+                                    <img src={image.pr5} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                                 <div className='lg:w-[33%] lg:h-[65vh]'>
-                                    <img src={image.pr2} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
+                                    <img src={image.pr2} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                                 <div className='lg:w-[33%] lg:h-[65vh]'>
-                                    <img src={image.pr6} alt="" className='w-full h-[100%] object-cover rounded-lg shadow-md shadow-[#000]' />
+                                    <img src={image.pr6} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                             </div>
 
@@ -549,46 +581,84 @@ const Main = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <motion.p
-                                    className='uppercase text-[#fff] text-[25px] font-semibold  pb-2 transition-colors duration-300 group-hover:text-[#ffd2a9]'
+                                    className='lg:pl-1  p-1 uppercase text-[#fff] text-[25px] font-semibold  pb-2 transition-colors duration-300 group-hover:text-[#ffd2a9]'
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8 }}
                                 >Let’s work together!
                                 </motion.p>
                                 <motion.p
-                                    className='lg:w-[90%] text-[#DDD] text-[14px]'
+                                    className='lg:w-[90%] text-[#DDD] text-[14px] lg:pl-1  p-1'
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8 }}
                                 >I design and code beautifully simple things and I love what I do. Just simple like that!
                                 </motion.p>
-                                <div className='w-[100%] flex gap-5 pt-8'>
-                                    <input type="text" placeholder='First name' className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD] ' />
-                                    <input type="text" placeholder='Last name' className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD] ' />
-                                </div>
-                                <div className='w-[100%] flex gap-5 pt-3'>
-                                    <input type="text" placeholder='Email address' className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]' />
-                                    <input type="text" placeholder='Phone number' className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]' />
-                                </div>
-                                <div className='w-[100%] pt-3'>
-                                    <textarea rows={8} placeholder='Message' className='w-[100%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'></textarea>
-                                </div>
-                                <div className='pt-3'>
-                                    <div className="flex  md:justify-start">
-                                        <motion.button
-                                            className="relative flex items-center px-6 py-3 bg-[#ffd2a9] rounded-full border border-[#feb273] overflow-hidden group"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <span className="relative z-10 text-sm font-medium text-black">Send Massage</span>
-                                            <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-                                            <span className="relative z-10 ml-3 text-black">
-                                                <IoIosSend className="w-4 h-4" />
-                                            </span>
-                                        </motion.button>
+                                <form ref={form} onSubmit={sendEmail} className='lg:pl-1 p-1'>
+                                    <div className='w-[100%] flex gap-5 pt-8'>
+                                        <input
+                                            type="text"
+                                            name="firstName"
+                                            placeholder='First name'
+                                            className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'
+                                            required
+                                        />
+                                        <input
+                                            type="text"
+                                            name="lastName"
+                                            placeholder='Last name'
+                                            className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'
+                                            required
+                                        />
                                     </div>
-                                </div>
+                                    <div className='w-[100%] flex gap-5 pt-3'>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            placeholder='Email address'
+                                            className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'
+                                            required
+                                        />
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            placeholder='Phone number'
+                                            className='w-[50%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'
+                                        />
+                                    </div>
+                                    <div className='w-[100%] pt-3'>
+                                        <textarea
+                                            name="message"
+                                            rows={8}
+                                            placeholder='Message'
+                                            className='w-[100%] bg-transparent rounded-md p-3 border-[#DDD]/25 border-[1px] text-[14px] text-[#DDD]'
+                                            required
+                                        ></textarea>
+                                    </div>
+                                    {submitStatus && (
+                                        <div className={`mt-3 text-sm ${submitStatus.includes('success') ? 'text-green-500' : 'text-red-500'}`}>
+                                            {submitStatus}
+                                        </div>
+                                    )}
+                                    <div className='pt-3'>
+                                        <div className="flex md:justify-start">
+                                            <motion.button
+                                                type="submit"
+                                                disabled={isSubmitting}
+                                                className="relative flex items-center px-6 py-3 bg-[#ffd2a9] rounded-full border border-[#feb273] overflow-hidden group disabled:opacity-50"
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <span className="relative z-10 text-sm font-medium text-black">
+                                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                                </span>
+                                                <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                                                <span className="relative z-10 ml-3 text-black">
+                                                    <IoIosSend className="w-4 h-4" />
+                                                </span>
+                                            </motion.button>
+                                        </div>
+                                    </div>
+                                </form>
                             </motion.div>
 
                             <motion.div
