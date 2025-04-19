@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Carousel from './carousel/Carousel';
 import CarouselPr2 from './carousel/CarouselPr2';
 import CarouselPr6 from './carousel/CarouselPr6';
+import CarouselPr3 from './carousel/CarouselPr3';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -77,6 +78,18 @@ const Main = () => {
                         {/* imane portfolio */}
                         <div style={{ position: 'relative' }}>
                             <CarouselPr2
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
+
+                        {/* morocco */}
+                        <div style={{ position: 'relative' }}>
+                            <CarouselPr3
                                 baseWidth={300}
                                 autoplay={false}
                                 autoplayDelay={4000}

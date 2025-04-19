@@ -28,4 +28,8 @@ export default{
     imanePortfolio : require("../assets/images/imanePortfolio/imanePortfolio.jpeg"),
     imanePortfolio2 : require("../assets/images/imanePortfolio/imanePortfolio2.jpeg"),
     imanePortfolio3 : require("../assets/images/imanePortfolio/imanePortfolio3.jpeg"),
+
+
+    morocco : require("../assets/images/morocco.jpeg"),
+    morocco2 : require("../assets/images/morocco2.jpeg"),
 }
