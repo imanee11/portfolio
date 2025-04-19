@@ -3,6 +3,7 @@ import image from '../../constants/image'; // Adjust path based on your project 
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './carousel/Carousel';
+import CarouselPr2 from './carousel/CarouselPr2';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -59,7 +60,7 @@ const Main = () => {
                             />
                         </div>
                         <div style={{ position: 'relative' }}>
-                            <Carousel
+                            <CarouselPr2
                                 baseWidth={300}
                                 autoplay={false}
                                 autoplayDelay={4000}
@@ -81,7 +82,7 @@ const Main = () => {
                     </div>
 
                     {/* Second Row */}
-                    <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
+                    {/* <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
                         {imageDetails.slice(3).map((img, index) => (
                             <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
                                 <img
@@ -95,7 +96,7 @@ const Main = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

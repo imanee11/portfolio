@@ -16,4 +16,9 @@ export default{
     task2 : require ("../assets/images/task/Screenshot_12-4-2025_145641_127.0.0.1.jpeg"),
     task3 : require("../assets/images/task/Screenshot_12-4-2025_15223_127.0.0.1.jpeg"),
     task4 : require("../assets/images/task/Screenshot_12-4-2025_15928_127.0.0.1.jpeg"),
+
+
+    imanePortfolio : require("../assets/images/imanePortfolio/imanePortfolio.jpeg"),
+    imanePortfolio2 : require("../assets/images/imanePortfolio/imanePortfolio2.jpeg"),
+    imanePortfolio3 : require("../assets/images/imanePortfolio/imanePortfolio3.jpeg"),
 }
