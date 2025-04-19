@@ -2,6 +2,7 @@ import React from 'react';
 import image from '../../constants/image'; // Adjust path based on your project structure
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import Carousel from './carousel/Carousel';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Main = () => {
                 {/* Image Sections */}
                 <div className='flex flex-col gap-10'>
                     {/* First Row */}
-                    <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
+                    {/* <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
                         {imageDetails.slice(0, 3).map((img, index) => (
                             <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
                                 <img
@@ -44,6 +45,39 @@ const Main = () => {
                                 </div>
                             </div>
                         ))}
+                    </div> */}
+                    <div className="flex flex-wrap gap-[3vw] justify-center">
+
+                        <div style={{ position: 'relative' }}>
+                            <Carousel
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
+                        <div style={{ position: 'relative' }}>
+                            <Carousel
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
+                        <div style={{ position: 'relative' }}>
+                            <Carousel
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
                     </div>
 
                     {/* Second Row */}

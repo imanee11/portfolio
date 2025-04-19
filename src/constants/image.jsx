@@ -10,4 +10,10 @@ export default{
     pr4 : require('../assets/images/pr4.jpeg'),
     pr5 : require('../assets/images/landingPage.jpeg'),
     pr6 : require('../assets/images/pr6.jpeg'),
+
+
+    task1 : require("../assets/images/task/landingPage.jpeg"),
+    task2 : require ("../assets/images/task/Screenshot_12-4-2025_145641_127.0.0.1.jpeg"),
+    task3 : require("../assets/images/task/Screenshot_12-4-2025_15223_127.0.0.1.jpeg"),
+    task4 : require("../assets/images/task/Screenshot_12-4-2025_15928_127.0.0.1.jpeg"),
 }
