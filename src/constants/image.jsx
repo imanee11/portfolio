@@ -39,4 +39,11 @@ export default{
     Restaurant3 : require("../assets/images/restaurant/Restaurant3.jpeg"),
     Restaurant4 : require("../assets/images/restaurant/Restaurant4.jpeg"),
     Restaurant5 : require("../assets/images/restaurant/Restaurant5.jpeg"),
+
+
+    yummy : require("../assets/images/yummy/yummy.jpeg"),
+    yummy2 : require("../assets/images/yummy/yummy2.jpeg"),
+    yummy3 : require("../assets/images/yummy/yummy3.jpeg"),
+    yummy4 : require("../assets/images/yummy/yummy4.jpeg"),
+    yummy5 : require("../assets/images/yummy/yummy5.jpeg"),
 }

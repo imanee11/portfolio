@@ -7,6 +7,7 @@ import CarouselPr2 from './carousel/CarouselPr2';
 import CarouselPr6 from './carousel/CarouselPr6';
 import CarouselPr3 from './carousel/CarouselPr3';
 import CarouselPr4 from './carousel/CarouselPr4';
+import CarouselPr5 from './carousel/CarouselPr5';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -113,6 +114,16 @@ const Main = () => {
                         </div>
 
                         {/* yummy */}
+                        <div style={{ position: 'relative' }}>
+                            <CarouselPr5
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
 
 
 
