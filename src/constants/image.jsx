@@ -32,4 +32,11 @@ export default{
 
     morocco : require("../assets/images/morocco.jpeg"),
     morocco2 : require("../assets/images/morocco2.jpeg"),
+
+
+    Restaurant : require("../assets/images/restaurant/Restaurant.jpeg"),
+    Restaurant2 : require("../assets/images/restaurant/Restauran2.jpeg"),
+    Restaurant3 : require("../assets/images/restaurant/Restaurant3.jpeg"),
+    Restaurant4 : require("../assets/images/restaurant/Restaurant4.jpeg"),
+    Restaurant5 : require("../assets/images/restaurant/Restaurant5.jpeg"),
 }

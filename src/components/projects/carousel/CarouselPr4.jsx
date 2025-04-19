@@ -159,7 +159,7 @@ export default function CarouselPr4({
             ref={containerRef}
             className={`relative overflow-hidden p-4 ${round
                 ? "rounded-full border border-white"
-                : "rounded-[24px] border bg-transparent border-[#475569]/25"
+                : "rounded-[24px] border bg-transparent border-[#DDD]/10"
                 }`}
             style={{
                 width: `${baseWidth}px`,
@@ -197,7 +197,7 @@ export default function CarouselPr4({
                             key={index}
                             className={`relative shrink-0 flex flex-col ${round
                                 ? "items-center justify-center text-center bg-[#060606] border-0"
-                                : "items-start justify-between  border border-[#475569]/25 rounded-[12px]"
+                                : "items-start justify-between  border border-[#DDD]/10 rounded-[12px]"
                                 } overflow-hidden cursor-grab active:cursor-grabbing`}
                             style={{
                                 width: itemWidth,
