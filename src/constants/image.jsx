@@ -18,6 +18,13 @@ export default{
     task4 : require("../assets/images/task/Screenshot_12-4-2025_15928_127.0.0.1.jpeg"),
 
 
+    fashe : require("../assets/images/fashe/fashe.jpeg"),
+    fashe2 : require("../assets/images/fashe/fashe2.jpeg"),
+    fashe3 : require("../assets/images/fashe/fashe3.jpeg"),
+    fashe6 : require("../assets/images/fashe/fashe6.jpeg"),
+    fashe7 : require("../assets/images/fashe/fashe7.jpeg"),
+
+
     imanePortfolio : require("../assets/images/imanePortfolio/imanePortfolio.jpeg"),
     imanePortfolio2 : require("../assets/images/imanePortfolio/imanePortfolio2.jpeg"),
     imanePortfolio3 : require("../assets/images/imanePortfolio/imanePortfolio3.jpeg"),

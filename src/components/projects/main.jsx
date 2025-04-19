@@ -4,6 +4,7 @@ import { FaLongArrowAltLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Carousel from './carousel/Carousel';
 import CarouselPr2 from './carousel/CarouselPr2';
+import CarouselPr6 from './carousel/CarouselPr6';
 
 const Main = () => {
     const navigate = useNavigate();
@@ -49,6 +50,7 @@ const Main = () => {
                     </div> */}
                     <div className="flex flex-wrap gap-[3vw] justify-center">
 
+                        {/* task */}
                         <div style={{ position: 'relative' }}>
                             <Carousel
                                 baseWidth={300}
@@ -59,6 +61,20 @@ const Main = () => {
                                 round={false}
                             />
                         </div>
+
+                        {/* fashe */}
+                        <div style={{ position: 'relative' }}>
+                            <CarouselPr6
+                                baseWidth={300}
+                                autoplay={false}
+                                autoplayDelay={4000}
+                                pauseOnHover={true}
+                                loop={true}
+                                round={false}
+                            />
+                        </div>
+
+                        {/* imane portfolio */}
                         <div style={{ position: 'relative' }}>
                             <CarouselPr2
                                 baseWidth={300}
@@ -69,16 +85,8 @@ const Main = () => {
                                 round={false}
                             />
                         </div>
-                        <div style={{ position: 'relative' }}>
-                            <Carousel
-                                baseWidth={300}
-                                autoplay={false}
-                                autoplayDelay={4000}
-                                pauseOnHover={true}
-                                loop={true}
-                                round={false}
-                            />
-                        </div>
+
+
                     </div>
 
                     {/* Second Row */}
