@@ -200,7 +200,7 @@ export default function CarouselPr3({
                                     <p className="flex flex-wrap gap-[5px]">
                                         {Array.isArray(item.description)
                                             ? item.description.map((desc, i) => (
-                                                <span className="bg-[#1e293b] text-[#fff] inline-block px-3 py-1 rounded-full uppercase text-[9px] font-bold" key={i}>
+                                                <span className="bg-[#ffd2a9] text-[#000] inline-block px-3 py-1 rounded-full uppercase text-[9px] font-bold" key={i}>
 
                                                     {desc}
                                                     {/* {i < item.description.length - 1 && ", "} */}
@@ -219,14 +219,14 @@ export default function CarouselPr3({
                 className={`flex w-full justify-center ${round ? "absolute z-20 bottom-12 left-1/2 -translate-x-1/2" : ""
                     }`}
             >
-                <div className="mt-4 flex w-[150px] gap-5 justify-center">
+                <div className="mt-4 flex w-[150px] gap-3 justify-center">
                     {items.map((_, index) => (
                         <motion.div
                             key={index}
                             className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${currentIndex % items.length === index
                                 ? round
                                     ? "bg-white"
-                                    : "bg-[#1e293b]"
+                                    : "bg-[#ffd2a9]"
                                 : round
                                     ? "bg-[#555]"
                                     : "bg-[rgba(51,51,51,0.4)]"
