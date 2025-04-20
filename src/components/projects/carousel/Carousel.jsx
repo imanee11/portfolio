@@ -221,7 +221,7 @@ export default function Carousel({
                                     <p className="flex flex-wrap gap-[5px]">
                                         {Array.isArray(item.description)
                                             ? item.description.map((desc, i) => (
-                                                <span className="bg-[#ffd2a9] text-[#000] inline-block px-3 py-1 rounded-full uppercase text-[9px] font-bold" key={i}>
+                                                <span className="bg-[#bdd9d8] text-[#000] inline-block px-3 py-1 rounded-full uppercase text-[9px] font-bold" key={i}>
 
                                                     {desc}
                                                     {/* {i < item.description.length - 1 && ", "} */}
@@ -247,7 +247,7 @@ export default function Carousel({
                             className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${currentIndex % items.length === index
                                 ? round
                                     ? "bg-white"
-                                    : "bg-[#ffd2a9]"
+                                    : "bg-[#bdd9d8]"
                                 : round
                                     ? "bg-[#555]"
                                     : "bg-[rgba(51,51,51,0.4)]"
