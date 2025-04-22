@@ -115,18 +115,20 @@ const Main = () => {
                             </p>
 
                             <div className="flex justify-center md:justify-start">
-                                <motion.button
-                                    className="relative flex items-center px-6 py-3 bg-[#ffd2a9] rounded-full border border-[#feb273] overflow-hidden group"
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <span className="relative z-10 text-sm font-medium text-black">Hire Me</span>
-                                    <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-                                    <span className="relative z-10 ml-3 text-black">
-                                        <FaLongArrowAltRight className="w-4 h-4" />
-                                    </span>
-                                </motion.button>
+                                <a href="#contact">
+                                    <motion.button
+                                        className="relative flex items-center px-6 py-3 bg-[#ffd2a9] rounded-full border border-[#feb273] overflow-hidden group"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <span className="relative z-10 text-sm font-medium text-black">Hire Me</span>
+                                        <span className="absolute inset-0 bg-[#feb273] rounded-full -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                                        <span className="relative z-10 ml-3 text-black">
+                                            <FaLongArrowAltRight className="w-4 h-4" />
+                                        </span>
+                                    </motion.button>
+                                </a>
                             </div>
                         </motion.div>
 
