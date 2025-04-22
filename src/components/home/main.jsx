@@ -698,7 +698,9 @@ const Main = () => {
                     {/*  fixed links  */}
                     <section className='fixed lg:bottom-5 lg:right-5 bottom-8 right-5'>
                         <div className='flex flex-col gap-3'>
-                            <FaLinkedinIn className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
+                            <a href="">
+                                <FaLinkedinIn className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
+                            </a>
                             <a href="https://github.com/imanee11">
                                 <FaGithub className='text-[#bdd9d8] cursor-pointer lg:text-[16px] text-[22px]' />
                             </a>
