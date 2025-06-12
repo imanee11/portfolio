@@ -208,7 +208,7 @@ export default function CarouselPr6({
                             transition={effectiveTransition}
                         >
 
-                            <img src={item.img} alt="" className="w-[100%] h-[100%]" />
+                            <img src={item.img} loading="lazy" alt="" className="w-[100%] h-[100%]" />
                             {/* <div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
                                 <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060606]">
                                     {item.icon}
