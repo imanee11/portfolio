@@ -51,7 +51,7 @@ const Main = () => {
                             </div>
                         ))}
                     </div> */}
-                    <div className="flex flex-col lg:flex-row gap-[3vw] items-center justify-center">
+                    <div className="flex flex-wrap gap-[3vw] items-center justify-center">
 
                         {/* task */}
                         <div style={{ position: 'relative' }}>
@@ -90,7 +90,7 @@ const Main = () => {
                         </div>
                     </div>
 
-                    <div className='flex gap-[3vw] flex-col lg:flex-row justify-center items-center'>
+                    <div className='flex gap-[3vw] flex-wrap justify-center items-center'>
                         {/* morocco */}
                         <div style={{ position: 'relative' }}>
                             <CarouselPr3
