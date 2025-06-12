@@ -255,13 +255,13 @@ const Main = () => {
                         >
                             {/* <Tabs/> */}
                             <div className='flex flex-col lg:flex-row gap-4 lg:w-[80vw]'>
-                                <div className='lg:w-[33%] lg:h-[65vh]'>
+                                <div className='lg:w-[33%] lg:h-[65vh] h-[50vh]'>
                                     <img src={image.pr5} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
-                                <div className='lg:w-[33%] lg:h-[65vh]'>
+                                <div className='lg:w-[33%] lg:h-[65vh] h-[50vh]'>
                                     <img src={image.pr2} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
-                                <div className='lg:w-[33%] lg:h-[65vh]'>
+                                <div className='lg:w-[33%] lg:h-[65vh] h-[50vh]'>
                                     <img src={image.pr6} alt="" className='w-full h-[100%]  rounded-lg shadow-md shadow-[#000]' />
                                 </div>
                             </div>
