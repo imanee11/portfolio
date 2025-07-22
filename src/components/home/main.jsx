@@ -314,13 +314,34 @@ const Main = () => {
                                     </p>
                                 </div>
 
-                                <div className="border-b-[1px] border-[#bdd9d8] py-3">
-                                    <p className="text-[#feb273] lg:text-[17px] text-[15px]  font-bold pb-2">May 2024 - Present</p>
-                                    <p className="lg:text-[20px] text-[15px] font-semibold text-[#fff] ">
-                                        Working on projects during the training
-                                    </p>
-                                    <p className="text-[#ddd] lg:text-[14px] text-[12px]">Lions Geek</p>
+                                <div className="flex flex-col gap-5">
+                                    <motion.div
+                                        className="border-b-[1px] border-[#bdd9d8] py-3"
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.3 }}
+                                    >
+                                        <p className="text-[#feb273] lg:text-[17px] text-[15px]  font-bold pb-2">Mai 2025 - Présent</p>
+                                        <p className="lg:text-[20px] text-[15px] font-semibold text-[#fff] ">
+                                            Developing real projects during training
+                                        </p>
+                                        <p className="text-[#ddd] lg:text-[14px] text-[12px]">Geeks Institute</p>
+                                    </motion.div>
+
+                                    <motion.div
+                                        className="border-b-[1px] border-[#bdd9d8] py-3"
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.3 }}
+                                    >
+                                        <p className="text-[#feb273] lg:text-[17px] text-[15px]  font-bold pb-2">May - Nov 2024</p>
+                                        <p className="lg:text-[20px] text-[15px] font-semibold text-[#fff] ">
+                                            Working on projects during the training
+                                        </p>
+                                        <p className="text-[#ddd] lg:text-[14px] text-[12px]">Lions Geek</p>
+                                    </motion.div>
                                 </div>
+
                             </motion.div>
 
                             {/* My Education Section */}
@@ -346,7 +367,19 @@ const Main = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.3 }}
                                     >
-                                        <p className="text-[#feb273] lg:text-[17px] text-[15px] font-bold pb-2">May 2024 - Present</p>
+                                        <p className="text-[#feb273] lg:text-[17px] text-[15px]  font-bold pb-2">Mai 2025 - Présent</p>
+                                        <p className="lg:text-[20px] text-[15px] font-semibold text-[#fff] ">
+                                            Full-stack web development training
+                                        </p>
+                                        <p className="text-[#ddd] lg:text-[14px] text-[12px]">Geeks Institute</p>
+                                    </motion.div>
+                                    <motion.div
+                                        className="border-b-[1px] border-[#bdd9d8] py-3"
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.3 }}
+                                    >
+                                        <p className="text-[#feb273] lg:text-[17px] text-[15px] font-bold pb-2">May - Nov 2024</p>
                                         <p className="lg:text-[20px] text-[15px] font-semibold text-[#fff]">
                                             6 month training in web development
                                         </p>
