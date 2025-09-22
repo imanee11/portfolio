@@ -8,6 +8,8 @@ import CarouselPr6 from './carousel/CarouselPr6';
 import CarouselPr3 from './carousel/CarouselPr3';
 import CarouselPr4 from './carousel/CarouselPr4';
 import CarouselPr5 from './carousel/CarouselPr5';
+import MagicBento from './MagicBento';
+
 
 const Main = () => {
     const navigate = useNavigate();
@@ -34,27 +36,11 @@ const Main = () => {
                 </div>
 
                 {/* Image Sections */}
-                <div className='flex flex-col gap-10'>
-                    {/* First Row */}
-                    {/* <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
-                        {imageDetails.slice(0, 3).map((img, index) => (
-                            <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
-                                <img
-                                    src={img.src}
-                                    alt={img.title}
-                                    className="w-full h-[100%]  rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
-                                />
-                                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300">
-                                    <h3 className="text-[20px] font-semibold mb-2 text-center">{img.title}</h3>
-                                    <p className="text-[12px] text-center px-4">{img.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div> */}
-                    <div className="flex flex-wrap gap-[3vw] items-center justify-center">
+                {/* <div className='flex flex-col gap-10'> */}
+                    {/* <div className="flex flex-wrap gap-[3vw] items-center justify-center"> */}
 
                         {/* task */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <Carousel
                                 baseWidth={300}
                                 autoplay={false}
@@ -63,10 +49,10 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
+                        </div> */}
 
                         {/* fashe */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <CarouselPr6
                                 baseWidth={300}
                                 autoplay={false}
@@ -75,10 +61,10 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
+                        </div> */}
 
                         {/* imane portfolio */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <CarouselPr2
                                 baseWidth={300}
                                 autoplay={false}
@@ -87,12 +73,12 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
 
-                    <div className='flex gap-[3vw] flex-wrap justify-center items-center'>
+                    {/* <div className='flex gap-[3vw] flex-wrap justify-center items-center'> */}
                         {/* morocco */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <CarouselPr3
                                 baseWidth={300}
                                 autoplay={false}
@@ -101,10 +87,10 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
+                        </div> */}
 
                         {/* restaurant */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <CarouselPr4
                                 baseWidth={300}
                                 autoplay={false}
@@ -113,10 +99,10 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
+                        </div> */}
 
                         {/* yummy */}
-                        <div style={{ position: 'relative' }}>
+                        {/* <div style={{ position: 'relative' }}>
                             <CarouselPr5
                                 baseWidth={300}
                                 autoplay={false}
@@ -125,28 +111,26 @@ const Main = () => {
                                 loop={true}
                                 round={false}
                             />
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
 
-                    {/* Second Row */}
-                    {/* <div className='lg:h-[70vh] flex flex-col lg:flex-row justify-center gap-5'>
-                        {imageDetails.slice(3).map((img, index) => (
-                            <div key={index} className="lg:w-[28%] lg:h-[100%] h-[60vh] relative group overflow-hidden rounded-lg">
-                                <img
-                                    src={img.src}
-                                    alt={img.title}
-                                    className="w-full h-[100%] object-cover rounded-lg transition duration-300 ease-in-out group-hover:blur-md"
-                                />
-                                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300">
-                                    <h3 className="text-[20px] font-semibold mb-2 text-center">{img.title}</h3>
-                                    <p className="text-[12px] text-center px-4">{img.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div> */}
+
+                    <MagicBento
+                        textAutoHide={true}
+                        enableStars={true}
+                        enableSpotlight={true}
+                        enableBorderGlow={true}
+                        enableTilt={true}
+                        enableMagnetism={true}
+                        clickEffect={true}
+                        spotlightRadius={300}
+                        particleCount={12}
+                        glowColor="132, 0, 255"
+                    />
+
                 </div>
             </div>
-        </div>
+        // </div>
     );
 };
 
