@@ -6,7 +6,7 @@ import Projects from './pages/projects';
 
 const App = () => {
   return (
-    <div className='bg-[#0c0e0e]' >
+    <div>
       
     
     <Routes>
